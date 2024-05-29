@@ -1,0 +1,264 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Oswald'
+}
+@font-face{
+    font-family: 'Oswald';
+    src: url(font/static/Oswald-Regular.ttf);
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: 3% 1fr 1fr 1fr 1fr 3%;
+    grid-template-rows: 50px 700px auto auto auto auto auto 200px auto 200px auto 100px;
+    grid-template-areas:
+    "... men men men men ..."
+    "... banner banner banner banner ..."
+    "... texto texto image image ..."
+    "... video video texti texti ..."
+    "... ... characters characters ... ... "
+    "... texte texte texte texte ..."
+    "... gallery gallery gallery gallery ..."
+    "... taxto taxto animacion animacion ..."
+    "... frase frase frase frase ..."
+    "... taxti taxti taxti taxti ..."
+    "... mapa mapa formulario formulario ..."
+    "... footer footer footer footer ..." ;
+}
+
+@media(max-width:768px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1% 1fr 1fr 1%;
+        grid-template-rows: 50px 400px auto auto 300px auto auto auto auto auto auto auto auto 300px auto 125px;
+        grid-template-areas: 
+        "... men men  ..."
+        "... banner banner ..." 
+        "... texto ..."
+        "... texto ..."
+        "... imagen imagen ..."
+        "... video video  ..."
+        "... texti texti ..."
+        "... character ..."
+        "... character ..."
+        "... texte texte  ..."
+        "... gallery gallery ..."
+        "... taxto taxto ..."
+        "... animacion animacion ..."
+        "... frase frase ..."
+        "... frase frase ..."
+        "... taxti taxti  ..."
+        "... mapa mapa ..."
+        "... formulario formulario ..."
+        "... footer footer ..."
+    }
+}
+.elem1{
+    background-color:#212529;
+    grid-area: men;
+}
+.elem2{
+    background-color:rgba(17, 0, 255, 0.685);
+    grid-area: banner;
+    background-image: url(images/Tiger-Header-Ca.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding-top: 8%;
+    text-shadow: 1px 1px 2px black;
+}
+.elem3{
+    background-color: #212529;
+    color: whitesmoke;
+    grid-area: texto;
+    padding: 4%;
+    margin: 7%;
+    border-radius: 1%;
+    box-shadow: 1px 1px 2px black;
+    line-height: 150%;
+    flex-wrap: wrap;
+    display: flex;
+    width: auto;
+}
+h3{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.elem4{
+    background-color: #212529;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2% 0 2%;
+}
+.elem5{
+    grid-area: image;
+    margin: auto;
+    padding: auto;
+}
+.elem5>img{
+    width: 100%;
+    height: auto;
+}
+.elem6{
+    grid-area: video;
+}
+.elem6>iframe{
+    width: 100%;
+    height: 100%;
+}
+.elem7{
+    grid-area: texti;
+    background-color:#212529;
+    color: white;
+    padding: 4%;
+    margin: 9%;
+    border-radius: 1%;
+    box-shadow: 1px 1px 2px black;
+    line-height: 150%;
+}
+.elem10{
+    grid-area: characters;
+    background-color:#212529;
+    color: whitesmoke;
+    margin-top: 3%;
+    border-radius: 2%;
+    box-shadow: 1px 1px 2px black;
+    line-height: 150%;
+}
+h2{
+    text-align: center;
+}
+.elem8{
+    grid-area: texte;
+    display: flex;
+    justify-content: space-around;
+}
+.elem8>.card{
+    margin: 2%;
+    box-shadow: 2PX 2PX 2PX black;
+    opacity: 0.7;
+}
+.elem8>.card:hover{
+    opacity: 1;
+}
+.elem9{
+    grid-area: gallery;
+    background-color:rgba(17, 0, 255, 0.685);
+}
+.elem11{
+    grid-area: taxto;
+    background-color:whitesmoke;
+    padding: 2% 2% 2% 2%;
+}
+.elem12{
+    grid-area: animacion;
+    background-color:whitesmoke;
+}
+.otro{
+    display: flex;
+    align-items: center;
+    margin-bottom: 200px;
+    flex-direction: column;
+}
+.sombri{
+    margin-top: 0%;
+    width: 40%;
+    height: 60%;
+    background-color: antiquewhite;
+    filter: blur(16px);
+    border-radius: 50%;
+}
+
+.elem13{
+    grid-area: taxti;
+    background-color:whitesmoke;
+    padding: 5%;
+}
+.elem14{
+    grid-area: mapa;
+    background-color: thistle;
+}
+.elem14>iframe{
+    width: 100%;
+    height: 100%;
+}
+.elem15{
+    grid-area: formulario;
+    background-color:whitesmoke;
+    line-height: 150%;
+    padding: 4%;
+}
+form{
+    width: 100%;
+}
+input, textarea, select{
+    margin: 10px 0 0 0;
+    width: 100%;
+    display: inline;
+}
+label{
+    width: 100%;
+    display: inline;
+}
+.inline{
+    width: unset;
+    margin: 0 8px 0 0 ;
+    vertical-align: middle;
+    display: inline;
+}
+.btn{
+    display: flex;
+}
+.btn-warning{
+    display: block;
+    width: 20%;
+    margin: 16px auto;
+    height: 32px;
+    font-size: 18px;
+}
+.btn-warning:hover{
+filter: opacity(20%);
+}
+.elem16{
+    grid-area: frase;
+    padding: 5% 5% 5% 5%;
+}
+.elem16>.card{
+    background-color:rgba(235, 235, 239, 0.685);
+    text-align: center;
+    color:black;
+}
+.redes{
+    margin-left: 1%;
+}
+.redes>a:hover{
+    filter: blur(2px);
+}
+.ul>li{
+    margin-left: 20%;
+}
+nav{
+    margin-left: 3%;
+    width: 94%;
+}
+.elem4>p{
+    flex-grow: 2;
+    color: aliceblue;
+}
+.otro>img{
+    width: 25%;
+    animation: maluco 2.5s infinite;
+}
+@keyframes maluco{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-24px)
+    }
+
+}
